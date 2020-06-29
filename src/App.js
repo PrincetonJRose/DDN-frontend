@@ -1,6 +1,8 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { dndAPICall } from './Services/api_calls'
+let data
 
 function App() {
   return (
@@ -18,6 +20,14 @@ function App() {
         >
           Learn React
         </a>
+        <input type='text' name='query' onKeyDown={ (e)=> {
+            if (e.key === 'Enter') {
+              console.log(e.target.value)
+              data = dndAPICall(e.target.value)
+              console.log(data)
+            }
+          }}
+        />
       </header>
     </div>
   );
