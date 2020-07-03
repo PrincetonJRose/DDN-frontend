@@ -2,19 +2,23 @@ export default (state = { characters: [], currentCharacter: null, errors: [], },
     switch(action.type)  {
         case 'SET_CHARACTERS':
             return {
-                ...state, characters: action.characters
+                ...state,
+                characters: action.characters
             }
         case 'CLEAR_CHARACTERS':
             return {
-                ...state, characters: []
+                ...state,
+                characters: []
             }
         case 'PLAY_CHARACTER':
             return {
-                ...state, currentCharacter: action.character
+                ...state,
+                currentCharacter: action.character
             }
         case 'CLEAR_CHARACTER':
             return {
-                ...state, currentCharacter: null
+                ...state,
+                currentCharacter: null
             }
         default: return state
     }
