@@ -12,6 +12,6 @@ export function dndAPICall(url) {
     })
     .catch( errors => console.log(errors) )
     .then( response => response.json() )
-    .then( data => data )
+    
 }
 

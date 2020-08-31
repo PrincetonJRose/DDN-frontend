@@ -25,7 +25,7 @@ const App = props => {
         <input type='text' name='query' onKeyDown={ (e)=> {
             if (e.key === 'Enter') {
               console.log(e.target.value)
-              props.dispatch({ type: 'FETCH_DATA', data: dndAPICall(e.target.value) })
+              dndAPICall(e.target.value).then( data => props.dispatch({ type: 'FETCH_DATA', data: data }) )
             }
           }}
         />
